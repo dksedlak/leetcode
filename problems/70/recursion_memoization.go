@@ -15,9 +15,6 @@ func climbStairs(n int) int {
 		return 1
 	}
 
-	first := climbStairs(n - 1)
-	second := climbStairs(n - 2)
-	memory[n] = first + second
-
+	memory[n] = climbStairs(n-1) + climbStairs(n-2)
 	return memory[n]
 }
